@@ -19,6 +19,13 @@ class MainActivity : AppCompatActivity(), MainView {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 
+    override fun appendMessageToTextView(message: String) {
+        simple_text_view.apply {
+            append(message)
+            append("\n")
+        }
+    }
+
     override fun onDestroy() {
         super.onDestroy()
         presenter.detachView()

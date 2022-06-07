@@ -21,7 +21,7 @@ class MainPresenter {
 
     private fun simpleCoroutineExample() {
         GlobalScope.launch(Dispatchers.Main) {
-            view?.showToast("Simple coroutine example")
+            view?.appendMessageToTextView("Simple coroutine example")
         }
     }
 }
